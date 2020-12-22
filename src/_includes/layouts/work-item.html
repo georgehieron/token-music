@@ -1,0 +1,51 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<section class="work-item">
+    <header>
+        <div>
+            <div>
+                <h1>
+                    {{ title }}
+                </h1>
+                <p>{{ summary }}</p>
+            </div>
+        </div>
+        <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" />
+    </header>
+    <article>
+        <div class="wrapper">
+            <h2>Key facts</h2>
+            <div>
+                <ol>
+                    {% for item in keyFacts %}
+                    <li>
+                        <span>{{ item.primary }}</span>
+                        <span>{{ item.secondary }}</span>
+                    </li>
+                    {% endfor %}
+                </ol>
+            </div>
+        </div>
+    </article>
+    <div class="wrapper">
+        <article>
+            {% for item in gallery %}
+            <figure>
+                <div>
+                    <img src="{{ item.image }}" alt="" aria-hidden="true" />
+                </div>
+                <figcaption>
+                    <h2>
+                        {{ item.title }}
+                    </h2>
+                    <p>
+                        {{ item.summary }}
+                    </p>
+                </figcaption>
+            </figure>
+            {% endfor %}
+        </article>
+    </div>
+</section>
+{% endblock %}
