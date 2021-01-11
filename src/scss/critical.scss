@@ -1,1 +1,34 @@
 @import 'reset';
+
+body {
+    font-size: 1.2rem;
+}
+
+.wrapper {
+    max-width: 120ex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.grenze {
+    font-family: 'Grenze', serif;
+}
+
+.germania-one {
+    font-family: 'Germania One', cursive;
+}
+
+.cabin {
+    font-family: 'Cabin', sans-serif;
+}
+
+.open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.margin {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
