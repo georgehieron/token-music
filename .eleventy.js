@@ -1,5 +1,4 @@
 // Plugins
-const rssPlugin = require("@11ty/eleventy-plugin-rss");
 
 // Filters
 const dateFilter = require("./src/filters/date-filter.js");
@@ -23,7 +22,6 @@ module.exports = (config) => {
     config.addFilter("dateFilter", dateFilter);
 
     // Add plugins
-    config.addPlugin(rssPlugin);
 
     // Returns a collection of blog posts in reverse date order
     config.addCollection("blog", (collection) => {
