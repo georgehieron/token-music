@@ -1,15 +1,50 @@
+$dark: #212121;
+$light: #fafafa;
+
+$yellow: #F3B61A;
+$yellow-dark: #966C03;
+
+$blue-light: #009CC2;
+$blue: #007A99;
+
 @import 'reset';
 
 body {
     font-size: 1.2rem;
+    background-color: $light;
+    color: $dark;
+
+    a {
+        color: $blue;
+    }
 }
 
 .wrapper {
     max-width: 120ex;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2.5rem;
+
+    &.darkyellow {
+        a {
+            color: $yellow-dark;
+        }
+    }
+}
+
+.dark {
+    background-color: $dark;
+    color: $light;
+
+    a {
+        color: $yellow;
+    }
+
+    &.blue {
+        a {
+            color: $blue-light;
+        }
+    }
 }
 
 .grenze {
@@ -18,9 +53,4 @@ body {
 
 .cabin {
     font-family: 'Cabin', sans-serif;
-}
-
-.margin {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
 }
