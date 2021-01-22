@@ -1,11 +1,16 @@
 $dark: #212121;
 $light: #fafafa;
+// $light-alt: #f9f8f7;
+$light-alt: #fffaed;
+$dark-alt: #201818;
 
 $yellow: #F3B61A;
-$yellow-dark: #966C03;
+$yellow-dark: #b34b00;
 
+$blue-lighter: #00bae8;
 $blue-light: #009CC2;
 $blue: #007A99;
+$blue-dark: #005E75;
 
 @import 'reset';
 
@@ -20,10 +25,19 @@ body {
 }
 
 .wrapper {
-    max-width: 120ex;
+    width: 100vw;
+    * {
+        max-width: 120ex;
+        margin: auto;
+    }
     margin-left: auto;
     margin-right: auto;
     padding: 2.5rem;
+    background-color: $light;
+
+    &.alt {
+        background-color: $light-alt;
+    }
 
     &.darkyellow {
         a {
@@ -40,9 +54,13 @@ body {
         color: $yellow;
     }
 
+    &.alt {
+        background-color: $dark-alt;
+    }
+
     &.blue {
         a {
-            color: $blue-light;
+            color: $blue-lighter;
         }
     }
 }
