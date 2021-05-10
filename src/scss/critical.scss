@@ -1,13 +1,9 @@
 $dark: #212121;
 $light: #fafafa;
-// $light-alt: #f9f8f7;
 $light-alt: #fffaed;
-$dark-alt: #201818;
 
-$yellow: #F3B61A;
-$yellow-dark: #b34b00;
-
-$blue-lighter: #00bae8;
+// $blue-lighter: #00bae8;
+$blue-lighter: #00acd0;
 $blue-light: #009CC2;
 $blue: #007A99;
 $blue-dark: #005E75;
@@ -15,34 +11,81 @@ $blue-dark: #005E75;
 @import 'reset';
 
 body {
+    font-family: 'Cabin', sans-serif;
     font-size: 1.2rem;
-    background-color: $light;
+    background-color: $light-alt;
     color: $dark;
+    letter-spacing: .03ch;
 
     a {
         color: $blue;
+        padding: 0 .1em;
+        text-decoration-thickness: .1em;
+        text-underline-offset: .15em;
+
+        &:not([class]) {
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(90deg,rgba($blue-lighter, .5) 0,rgba($blue-lighter, .5) 100%);
+            background-repeat: no-repeat;
+            background-position: 0 1.5em;
+            vertical-align: bottom;
+            overflow: hidden;
+            transition: 0.3s ease-in-out background-position, 0.3s ease-in-out color;
+
+            &:hover,
+            &:focus {
+                color: $dark;
+                background-position: 0 1em;
+            }
+        }
     }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: 'Grenze', serif;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    text-transform: uppercase;
+}
+
+h5,
+h6 {
+    margin-bottom: 0;
 }
 
 .wrapper {
     width: 100vw;
-    * {
-        max-width: 120ex;
-        margin: auto;
-    }
     margin-left: auto;
     margin-right: auto;
     padding: 2.5rem;
-    background-color: $light;
+    background-color: $light-alt;
 
-    &.alt {
-        background-color: $light-alt;
+    > * + * {
+        margin-top: 1em;
     }
 
-    &.darkyellow {
-        a {
-            color: $yellow-dark;
-        }
+    * {
+        max-width: 55rem;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -51,24 +94,18 @@ body {
     color: $light;
 
     a {
-        color: $yellow;
-    }
+        color: $blue-lighter;
 
-    &.alt {
-        background-color: $dark-alt;
-    }
+        &:not([class]) {
 
-    &.blue {
-        a {
-            color: $blue-lighter;
+            &:hover,
+            &:focus {
+                color: $light;
+            }
         }
     }
 }
 
 .grenze {
     font-family: 'Grenze', serif;
-}
-
-.cabin {
-    font-family: 'Cabin', sans-serif;
 }
