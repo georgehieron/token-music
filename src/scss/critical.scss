@@ -20,27 +20,20 @@
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
 
-$dark: #212121;
-$light: #fafafa;
-$light-alt: #fffaed;
-
-// $blue-lighter: #00bae8;
-$blue-lighter: #00acd0;
-$blue-light: #009CC2;
-$blue: #007A99;
-$blue-dark: #005E75;
-
 @import 'reset';
 
 body {
-    font-family: 'Cabin', sans-serif;
-    font-size: 1.2rem;
-    background-color: $light-alt;
-    color: $dark;
+    @include apply-utility('font', 'base');
+    font-size: #{get-size('500')};
+    background-color: var(--color-base);
+    color: var(--color-text);
+    // background-color: $light-warm;
+    // color: $dark;
     letter-spacing: .03ch;
 
     a {
-        color: $blue;
+        // color: $blue;
+        color: var(--color-primary);
         padding: 0 .1em;
         text-decoration-thickness: .1em;
         text-underline-offset: .15em;
@@ -48,16 +41,17 @@ body {
         &:not([class]) {
             position: relative;
             display: inline-block;
-            background: linear-gradient(90deg,rgba($blue-lighter, .5) 0,rgba($blue-lighter, .5) 100%);
+            background: linear-gradient(90deg,rgba($primary-lighter, .5) 0,rgba($primary-lighter, .5) 100%);
             background-repeat: no-repeat;
-            background-position: 0 1.5em;
+            background-position: 0 3em;
             vertical-align: bottom;
             overflow: hidden;
             transition: 0.3s ease-in-out background-position, 0.3s ease-in-out color;
 
             &:hover,
             &:focus {
-                color: $dark;
+                // color: $dark;
+                color: var(--color-text);
                 background-position: 0 1em;
             }
         }
@@ -98,7 +92,7 @@ h6 {
     margin-left: auto;
     margin-right: auto;
     padding: 2.5rem;
-    background-color: $light-alt;
+    // background-color: $light-warm;
 
     > * + * {
         margin-top: 1em;
@@ -116,7 +110,7 @@ h6 {
     color: $light;
 
     a {
-        color: $blue-lighter;
+        color: $primary-lighter;
 
         &:not([class]) {
 

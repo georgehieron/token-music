@@ -11,25 +11,22 @@ $font-body-i: 'Cabin Italic', Tahoma, sans-serif;
 $font-title: 'Grenze', Garamond, serif;
 
 /// SIZE SCALE
-/// This is a Major Third scale that powers all the utilities that
+/// This is a Minor Third scale that powers all the utilities that
 /// it is relevant for (font-size, margin, padding). All items are
 /// calcuated off the base size, so change that and cascade across
 /// your whole project.
 ///
 $gorko-size-scale: (
-    "100": $gorko-base-size * 0.512, // 8.19px
-    "200": $gorko-base-size * 0.64, // 10.24px
-    "300": $gorko-base-size * 0.8, // 12.8px
+    "100": $gorko-base-size * 0.579, // 9.26px
+    "200": $gorko-base-size * 0.694, // 11.11px
+    "300": $gorko-base-size * 0.833, // 13.33px
     "400": $gorko-base-size, // 16px
-    "500": $gorko-base-size * 1.25, // 20px
-    "600": $gorko-base-size * 1.56, // 25px
-    "700": $gorko-base-size * 1.95, // 31px
-    "800": $gorko-base-size * 2.44, // 39px
-    "900": $gorko-base-size * 3.05, // 48px
-    "1000": $gorko-base-size * 3.82, // 61px
-    "1100": $gorko-base-size * 4.77, // 76px
-    "1400": $gorko-base-size * 9.31, // 150px
-    "1600": $gorko-base-size * 14.6, // 233px
+    "500": $gorko-base-size * 1.2, // 19.2px
+    "600": $gorko-base-size * 1.44, // 23px
+    "700": $gorko-base-size * 1.728, // 27.65px
+    "800": $gorko-base-size * 2.074, // 32.2px
+    "900": $gorko-base-size * 2.488, // 39.8px
+    "1000": $gorko-base-size * 2.986, // 47.8px
 );
 
 // WIDTHS
@@ -39,19 +36,24 @@ $max-width: 90rem;
 /// Colors are shared between backgrounds and text by default.
 /// You can also use them to power borders, fills or shadows, for example.
 ///
-$light: #f7f7f7;
-$light-primary: #28715C;
-$dark: #3d3d3d;
-$dark-primary: #efd036;
+
+$dark: #212121;
+$light: #fafafa;
+$light-warm: #fffaed;
+
+// $primary-lighter: #00bae8;
+$primary-lighter: #00acd0;
+$primary-light: #009CC2;
+$primary: #007A99;
+$primary-dark: #005E75;
 
 @import "mixins/dark-theme";
 
 :root {
     --color-theme: "light";
-    --color-base: #{$light};
+    --color-base: #{$light-warm};
     --color-text: #{$dark};
-    --color-primary: #{$light-primary};
-    --color-primary-alt: #{$dark-primary};
+    --color-primary: #{$primary};
 }
 
 [data-user-color-theme="light"] {
@@ -62,15 +64,13 @@ $dark-primary: #efd036;
     --color-theme: "dark";
     --color-base: #{$dark};
     --color-text: #{$light};
-    --color-primary: #{$dark-primary};
-    --color-primary-alt: #{$light-primary};
+    --color-primary: #{$primary-lighter};
 }
 
 $gorko-colors: (
     "base": var(--color-base),
     "text": var(--color-text),
     "primary": var(--color-primary),
-    "primary-alt": var(--color-primary-alt),
 );
 
 /// CORE CONFIG
