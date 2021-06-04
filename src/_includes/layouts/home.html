@@ -1,43 +1,32 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-{# <div class="wrapper">
-    <article>
-        <div>
-            <h1>{{ intro.main }}</h1>
-        </div>
-    </article>
-</div> #}
+<article class="wrapper">
+    <p class="lede">Experienced, professional tutor and musician, Exeter based, providing private tuition for most music genres in guitar, vocals, bass, Ukulele and Keyboard. Suitable for all ages, beginners +.</p>
+    <h2 id="about">About</h2>
+    {{ content | safe }}
 
-<div id="light" class="wrapper">
-    <h1>Token Music Grenze/Cabin</h1>
-    <p>Experienced, professional tutor and musician, <a href="#">Exeter based</a>, providing private tuition for most music genres in guitar, vocals, bass, Ukulele and Keyboard. Suitable for all ages, beginners +</p>
-    <h2>Token Music. Heading size 2</h2>
-    <p>Þæt ic mote ana ond minra eorla gedryht, þes hearda heap, Heorot fælsian. Hæbbe ic eac geahsod þæt se æglæca for his wonhydum wæpna ne recceð.</p>
-    <h3>Token Music. Heading size 3</h3>
-    <p>Þæt ic mote ana ond minra eorla gedryht, þes hearda heap, Heorot fælsian. Hæbbe ic eac geahsod þæt se æglæca for his wonhydum wæpna ne recceð.</p>
-    <h4>Token Music. Heading size 4</h4>
-    <p>Þæt ic mote ana ond minra eorla gedryht, þes hearda heap, Heorot fælsian. Hæbbe ic eac geahsod þæt se æglæca for his wonhydum wæpna ne recceð.</p>
-    <h5>Token Music. Heading size 5</h5>
-    <p>Þæt ic mote ana ond minra eorla gedryht, þes hearda heap, Heorot fælsian. Hæbbe ic eac geahsod þæt se æglæca for his wonhydum wæpna ne recceð.</p>
-    <h6>Token Music. Heading size 6</h6>
-    <p>Þæt ic mote ana ond minra eorla gedryht, þes hearda heap, Heorot fælsian. Hæbbe ic eac geahsod þæt se æglæca for his wonhydum wæpna ne recceð.</p>
-    <p>Ic þæt þonne forhicge (swa me Higelac sie, min mondrihten, modes bliðe), þæt ic sweord bere oþðe sidne scyld, geolorand to guþe, ac ic mid grape sceal fon wið feonde ond ymb feorh sacan, lað wið laþum; ðær gelyfan sceal. Dryhtnes dome se þe hine deað nimeð. <a href="#">Wen ic þæt he wille, gif he wealdan mot</a>, in þæm guðsele Geotena leode etan unforhte, swa he oft dyde, mægen Hreðmanna. Na þu minne þearft hafalan hydan, ac he me habban wile dreore fahne, gif mec deað nimeð. Byreð blodig wæl, byrgean þenceð, eteð angenga unmurnlice, mearcað morhopu; no ðu ymb mines ne þearft.</p>
-</div>
-<div id="testimonials" class="wrapper">
-    <h2>Testimonials</h2>
+    <h2 id="testimonials">Testimonials</h2>
     <blockquote>
-    <p>"Werian þohton. No he wiht fram me flodyþum feor fleotan meahte, hraþor on holme; no ic fram him wolde. Ða wit ætsomne on sæ wæron fif nihta fyrst, oþþæt unc flod todraf, wado weallende, wedera cealdost, nipende niht, ond norþanwind heaðogrim ondhwearf; hreo wæron yþa. Wæs merefixa mod onhrered; þær me wið laðum licsyrce min."</p>
-    <cite>— Abel Student</cite>
+    <p>James is a friendly, kind teacher who gives you a good selection of songs you'll be interested in. If you get stuck he helps you out.</p>
+    <cite>— Daniel, aged 9</cite>
     </blockquote>
-</div>
-<div id="pricing" class="wrapper">
-    <h2>Pricing</h2>
+    <blockquote>
+    <p>James tailors the lessons to keep them varied and interesting. He is professional, flexible and reliable</p>
+    <cite>— Chris Faulkner</cite>
+    </blockquote>
+
+    <h2 id="credentials">Credentials</h2>
+    <p>12 years' experience performing, writing, touring and recording music.</p>
+    <p>Graduated from the Exeter Academy of Music and Sound -Edexcel Level 3 BTEC National Certificate in Music Practice.</p>
+    <p>Graduated from the Bristol Institute of Modern Music 2012 – 2015: BA(Hons) Professional Musicianship.</p>
+
+    <h2 id="pricing">Pricing</h2>
     <ul>
         <li>30 minutes – ££</li>
         <li>1 hour – £££</li>
         <li>2 hours – ££££</li>
     </ul>
-</div>
+</article>
 
 {% endblock %}

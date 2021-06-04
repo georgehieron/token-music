@@ -27,12 +27,9 @@ body {
     font-size: #{get-size('500')};
     background-color: var(--color-base);
     color: var(--color-text);
-    // background-color: $light-warm;
-    // color: $dark;
     letter-spacing: .03ch;
 
     a {
-        // color: $blue;
         color: var(--color-primary);
         padding: 0 .1em;
         text-decoration-thickness: .1em;
@@ -50,7 +47,6 @@ body {
 
             &:hover,
             &:focus {
-                // color: $dark;
                 color: var(--color-text);
                 background-position: 0 1em;
             }
@@ -92,7 +88,6 @@ h6 {
     margin-left: auto;
     margin-right: auto;
     padding: 2.5rem;
-    // background-color: $light-warm;
 
     > * + * {
         margin-top: 1em;
@@ -105,23 +100,21 @@ h6 {
     }
 }
 
-.dark {
-    background-color: $dark;
-    color: $light;
+.site-head__brand {
+    @include apply-utility('box', 'block');
+    max-width: 100%;
 
-    a {
-        color: $primary-lighter;
-
-        &:not([class]) {
-
-            &:hover,
-            &:focus {
-                color: $light;
-            }
-        }
+    img {
+        max-width: 100%;
+        max-height: calc(#{get-size('1000')} * 2);
+        filter: invert(1);
     }
 }
 
-.grenze {
-    font-family: 'Grenze', serif;
+@include dark-theme() {
+    .site-head__brand {
+        img {
+            filter: none;
+        }
+    }
 }
