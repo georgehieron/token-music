@@ -2,29 +2,23 @@
 <header role="banner" class="site-head">
     <div class="wrapper">
         <div class="site-head__inner">
-            <h1 aria-label="{{ site.name }}" class="align-center site-head__brand">
-                <img src="images/meta/token-music-workmark---straight---1-line---white-text.png" alt="Token Music"></img>
-            </h1>
+            <a href="/" aria-label="{{ site.name }} - home" class="align-center h1 site-head__brand">
+                <img src="/images/meta/token-music-workmark---straight---1-line---white-text.png" alt="Token Music"></img>
+            </a>
             <nav class="nav site-head__nav" aria-label="Primary navigation">
                 <ul class="nav__list">
                     <li>
-                        <a href="#about">About</a>
+                        <a href="/#about">About</a>
                     </li>
                     <li>
-                        <a href="#testimonials">Testimonials</a>
+                        <a href="/#testimonials">Testimonials</a>
                     </li>
                     <li>
-                        <a href="#credentials">Credentials</a>
+                        <a href="/#credentials">Credentials</a>
                     </li>
                     <li>
-                        <a href="#pricing">Pricing</a>
+                        <a href="/#pricing">Pricing</a>
                     </li>
-                    {# {% for item in navigation.items %}
-                    <li>
-                        <a href="{{ item.url }}"
-                            {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-                    </li>
-                    {% endfor %} #}
                 </ul>
             </nav>
             <button id="js-theme-toggle" class="toggle-btn--theme box-flex">

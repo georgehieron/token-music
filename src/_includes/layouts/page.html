@@ -1,0 +1,10 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<article class="wrapper">
+    <h1 class="align-center">{{ title }}</h1>
+    {{ content | safe}}
+</article>
+
+{% endblock %}

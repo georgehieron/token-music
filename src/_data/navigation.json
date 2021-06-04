@@ -5,16 +5,8 @@
             "url": "/"
         },
         {
-            "text": "About",
-            "url": "/about/"
-        },
-        {
-            "text": "Work",
-            "url": "/work/"
-        },
-        {
-            "text": "Blog",
-            "url": "/blog/"
+            "text": "Terms & Conditions",
+            "url": "/terms-conditions/"
         }
     ]
 }
