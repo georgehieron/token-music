@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "Cabin";
+    src: url('/../fonts/Cabin-VariableFont_wdth,wght.ttf') format('truetype-variations');
+    font-weight: 400 700;
+    font-stretch: 75% 100%;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Cabin Italic";
+    src: url('/../fonts/Cabin-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
+    font-weight: 400 700;
+    font-stretch: 75% 100%;
+    font-display: swap;
+}
+
+body {
+    @include apply-utility('font', 'base');
+    font-size: #{get-size('400')};
+    background-color: var(--color-base);
+    color: var(--color-text);
+    letter-spacing: .03ch;
+
+    a {
+        color: var(--color-primary);
+        text-decoration-thickness: .1em;
+        text-underline-offset: .15em;
+
+        &:not([class]) {
+            position: relative;
+            display: inline-block;
+            padding: 0 .1em;
+            background: linear-gradient(90deg,rgba($primary-lighter, .5) 0,rgba($primary-lighter, .5) 100%);
+            background-repeat: no-repeat;
+            background-position: 0 3em;
+            vertical-align: bottom;
+            overflow: hidden;
+            transition: 0.3s ease-in-out background-position, 0.3s ease-in-out color;
+
+            &:hover,
+            &:focus {
+                color: var(--color-text);
+                background-position: 0 1em;
+            }
+        }
+    }
+
+    @include media-query('md') {
+        font-size: #{get-size('500')};
+    }
+
+    @include media-query('lg') {
+        font-size: #{get-size('600')};
+    }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: 'Grenze', serif;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    text-transform: uppercase;
+}
+
+h1,
+.h1 {
+    font-size: #{get-size('800')};
+
+    @include media-query('md') {
+        font-size: #{get-size('1000')};
+    }
+
+    @include media-query('lg') {
+        font-size: #{get-size('1100')};
+    }
+}
+
+h2,
+.h2 {
+    font-size: #{get-size('700')};
+
+    @include media-query('md') {
+        font-size: #{get-size('900')};
+    }
+
+    @include media-query('lg') {
+        font-size: #{get-size('1000')};
+    }
+}
+
+h3,
+.h3 {
+    font-size: #{get-size('600')};
+
+    @include media-query('md') {
+        font-size: #{get-size('800')};
+    }
+
+    @include media-query('lg') {
+        font-size: #{get-size('900')};
+    }
+}
+
+h4,
+.h4 {
+    font-size: #{get-size('500')};
+
+    @include media-query('md') {
+        font-size: #{get-size('700')};
+    }
+
+    @include media-query('lg') {
+        font-size: #{get-size('800')};
+    }
+}
+
+h5,
+.h5 {
+    font-size: #{get-size('400')};
+
+    @include media-query('md') {
+        font-size: #{get-size('600')};
+    }
+
+    @include media-query('lg') {
+        font-size: #{get-size('700')};
+    }
+}
+
+h6,
+.h6 {
+    font-size: #{get-size('300')};
+
+    @include media-query('md') {
+        font-size: #{get-size('500')};
+    }
+
+    @include media-query('lg') {
+        font-size: #{get-size('600')};
+    }
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+    margin-bottom: 0;
+}
+
+.lede {
+    @include apply-utility('font', 'base-i');
+    @include apply-utility('weight', 'bold');
+    font-size: #{get-size('500')};
+
+    @include media-query('md') {
+        font-size: #{get-size('600')};
+    }
+
+    @include media-query('lg') {
+        font-size: #{get-size('700')};
+    }
+}

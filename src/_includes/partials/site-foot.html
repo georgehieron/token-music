@@ -1,10 +1,15 @@
 <footer role="contentinfo" class="site-foot">
     <div class="wrapper">
-        {% for item in navigation.items %}
-        <li>
-            <a href="{{ item.url }}"
-                {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-        </li>
-        {% endfor %}
+        <nav id="footer-nav" class="footer-nav box-block">
+            <ul>
+                {% for item in navigation.items %}
+                <li>
+                    <a href="{{ item.url }}"
+                        {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <span>&#169; Token Music 2021</span>
     </div>
 </footer>

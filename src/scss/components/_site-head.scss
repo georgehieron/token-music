@@ -1,0 +1,31 @@
+.site-head__brand {
+    display: inline-block;
+    max-width: 100%;
+
+    img {
+        max-width: 100%;
+        max-height: calc(#{get-size('1000')} * 2);
+        filter: invert(1);
+    }
+}
+
+.site-head__nav {
+
+    .nav__list {
+        @include apply-utility('box', 'flex');
+        place-content: center;
+
+        li {
+            margin: 0 #{get-size('200')};
+        }
+    }
+
+}
+
+@include dark-theme() {
+    .site-head__brand {
+        img {
+            filter: none;
+        }
+    }
+}

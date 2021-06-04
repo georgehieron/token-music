@@ -1,0 +1,21 @@
+.skip-link {
+    @include vis-h;
+
+    &:focus {
+        @include apply-utility('weight', 'bold');
+        font-size: get-size('500');
+        top: get-size('500');
+        left: get-size('500');
+        z-index: 100000;
+        overflow: visible;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: get-size("100") get-size("400");
+        color: var(--color-base);
+        text-decoration: none;
+        white-space: nowrap;
+        background: var(--color-primary);
+        clip: auto;
+    }
+}
