@@ -6,11 +6,19 @@
         margin-left: #{get-size('100')};
         margin-right: #{get-size('100')};
     }
+
+    .social-link {
+        display: inline-block;
+
+        &:hover,
+        &:focus {
+            svg {
+                stroke: var(--color-primary);
+            }
+        }
+    }
 }
 
-.social-link {
-    display: inline-block;
-}
 
 @include dark-theme() {
     .social-link {

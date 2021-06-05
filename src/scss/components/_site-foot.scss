@@ -1,6 +1,6 @@
 .site-foot {
     background-color: var(--color-shade);
-    margin-top: #{get-size('1000')};
+    margin-top: #{get-size('700')};
     padding: #{get-size('600')} 0;
     border-bottom: .3em solid var(--color-primary);
 
@@ -33,8 +33,12 @@
         filter: none;
     }
 
+    .copyright {
+        font-stretch: 80%;
+    }
+
     @include media-query('sm') {
-        margin-top: #{get-size('1100')};
+        margin-top: #{get-size('800')};
 
         .site-foot__content {
             display: flex;

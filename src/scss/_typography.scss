@@ -65,7 +65,8 @@ h5,
 .h5,
 h6,
 .h6 {
-    font-family: 'Grenze', serif;
+    @include apply-utility('font', 'title');
+    line-height: 1;
 }
 
 h4,
@@ -206,5 +207,52 @@ ul {
 ol {
     ol {
         list-style: lower-roman;
+    }
+}
+
+blockquote {
+    font-style: normal;
+    width: 90%;
+    max-width: 40ch;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: #{get-size('1100')};
+
+    > p {
+        &:first-of-type {
+            position: relative;
+
+            &:before,
+            &:after {
+                @include apply-utility('font', 'title');
+                position: absolute;
+                color: var(--color-shade);
+                font-size: 5.5em;
+                line-height: 1;
+            }
+
+            &:before {
+                content: "“";
+                top: -.3em;
+                left: -.3em;
+            }
+
+            &:after {
+                content: "”";
+                bottom: -.6em;
+                right: -.3em;
+            }
+        }
+    }
+
+    cite {
+        position: relative;
+        font-stretch: 80%;
+        color: var(--color-primary);
+
+        &:before {
+            content: "—";
+            margin-right: .5em;
+        }
     }
 }

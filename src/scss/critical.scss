@@ -17,6 +17,12 @@
 @import "components/site-head";
 @import "components/site-foot";
 @import "components/social-links";
+@import "components/buttons";
+
+:focus {
+    outline: .3rem double var(--color-primary);
+    outline-offset: .1rem;
+}
 
 .wrapper {
     width: 60ch;

@@ -1,0 +1,15 @@
+button,
+.button {
+    @include apply-utility('weight', 'bold');
+    appearance: none;
+    color: var(--color-base);
+    background: var(--color-primary);
+    padding: get-size("100") get-size("700");
+    border: 0;
+    text-decoration: none;
+    letter-spacing: .05ch;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -18,6 +18,10 @@
         li {
             margin: 0 #{get-size('200')};
         }
+
+        a {
+            letter-spacing: .05ch;
+        }
     }
 
 }
