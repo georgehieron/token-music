@@ -2,6 +2,7 @@
     background-color: var(--color-shade);
     margin-top: #{get-size('1000')};
     padding: #{get-size('600')} 0;
+    border-bottom: .3em solid var(--color-primary);
 
     a {
         color: var(--color-text);
@@ -45,13 +46,22 @@
             }
         }
 
+        .site-foot__brand {
+            flex: 0 0 auto;
+        }
+
         .footer-nav,
         .copyright {
+            flex-basis: 33.333%;
             margin-top: auto;
         }
 
         .footer-nav {
             margin-bottom: auto;
+        }
+
+        .copyright {
+            text-align: right;
         }
     }
 }
