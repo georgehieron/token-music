@@ -39,8 +39,10 @@ $max-width: 90rem;
 ///
 
 $dark: #212121;
+$dark-trans: #2121211a;
 $light: #fafafa;
 $light-warm: #fffaed;
+$light-warm-trans: #fffaed1a;
 
 // $primary-lighter: #00bae8;
 $primary-lighter: #00acd0;
@@ -55,6 +57,7 @@ $primary-dark: #005E75;
     --color-base: #{$light-warm};
     --color-text: #{$dark};
     --color-primary: #{$primary};
+    --color-shade: #{$dark-trans};
 }
 
 [data-user-color-theme="light"] {
@@ -66,6 +69,7 @@ $primary-dark: #005E75;
     --color-base: #{$dark};
     --color-text: #{$light};
     --color-primary: #{$primary-lighter};
+    --color-shade: #{$light-warm-trans};
 }
 
 $gorko-colors: (

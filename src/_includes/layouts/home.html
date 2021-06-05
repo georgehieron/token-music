@@ -1,33 +1,49 @@
 {% extends "layouts/base.html" %}
 
 {% block content %}
-<article class="wrapper">
-    <h1 class="visually-hidden">Token Music</h1>
-    <p class="lede">Experienced, professional tutor and musician, Exeter based, providing private tuition for most music genres in guitar, vocals, bass, Ukulele and Keyboard. Suitable for all ages, beginners +.</p>
-    <h2 id="about">About</h2>
-    {{ content | safe }}
+<article>
+    <section>
+        <div class="wrapper content">
+            <h1 class="visually-hidden">Token Music</h1>
+            <p class="lede">Experienced, professional tutor and musician, Exeter based, providing private tuition for most music genres in guitar, vocals, bass, ukulele and keyboard. Suitable for all ages, beginners +.</p>
+            <h2 id="about">About</h2>
+            {{ content | safe }}
+        </div>
+    </section>
 
-    <h2 id="testimonials">Testimonials</h2>
-    <blockquote>
-    <p>James is a friendly, kind teacher who gives you a good selection of songs you'll be interested in. If you get stuck he helps you out.</p>
-    <cite>— Daniel, aged 9</cite>
-    </blockquote>
-    <blockquote>
-    <p>James tailors the lessons to keep them varied and interesting. He is professional, flexible and reliable</p>
-    <cite>— Chris Faulkner</cite>
-    </blockquote>
+    <section d="testimonials">
+        <div class="wrapper content">
+            <h2>Testimonials</h2>
+            <blockquote>
+            <p>James is a friendly, kind teacher who gives you a good selection of songs you'll be interested in. If you get stuck he helps you out.</p>
+            <cite>— Daniel, aged 9</cite>
+            </blockquote>
+            <blockquote>
+            <p>James tailors the lessons to keep them varied and interesting. He is professional, flexible and reliable</p>
+            <cite>— Chris Faulkner</cite>
+            </blockquote>
+        </div>
+    </section>
 
-    <h2 id="credentials">Credentials</h2>
-    <p>12 years' experience performing, writing, touring and recording music.</p>
-    <p>Graduated from the Exeter Academy of Music and Sound -Edexcel Level 3 BTEC National Certificate in Music Practice.</p>
-    <p>Graduated from the Bristol Institute of Modern Music 2012 – 2015: BA(Hons) Professional Musicianship.</p>
+    <section id="credentials">
+        <div class="wrapper content">
+            <h2>Credentials</h2>
+            <p>12 years' experience performing, writing, touring and recording music.</p>
+            <p>Graduated from the Exeter Academy of Music and Sound -Edexcel Level 3 BTEC National Certificate in Music Practice.</p>
+            <p>Graduated from the Bristol Institute of Modern Music 2012 – 2015: BA(Hons) Professional Musicianship.</p>
+        </div>
+    </section>
 
-    <h2 id="pricing">Pricing</h2>
-    <ul>
-        <li>30 minutes – ££</li>
-        <li>1 hour – £££</li>
-        <li>2 hours – ££££</li>
-    </ul>
+    <section id="pricing">
+        <div class="wrapper content">
+            <h2>Pricing</h2>
+            <ul>
+                <li>30 minutes – ££</li>
+                <li>1 hour – £££</li>
+                <li>2 hours – ££££</li>
+            </ul>
+        </div>
+    </section>
 </article>
 
 {% endblock %}

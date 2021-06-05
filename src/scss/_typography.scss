@@ -175,3 +175,36 @@ h6,
         font-size: #{get-size('700')};
     }
 }
+
+.small {
+    font-size: #{get-size('200')};
+
+    @include media-query('md') {
+        font-size: #{get-size('300')};
+    }
+
+    @include media-query('lg') {
+        font-size: #{get-size('400')};
+    }
+}
+
+ul,
+ol {
+    li {
+        &::marker {
+            color: var(--color-primary);
+        }
+    }
+}
+
+ul {
+    ul {
+        list-style: square;
+    }
+}
+
+ol {
+    ol {
+        list-style: lower-roman;
+    }
+}

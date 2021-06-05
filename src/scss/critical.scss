@@ -15,6 +15,7 @@
 @import "utilities/visually-hidden";
 
 @import "components/site-head";
+@import "components/site-foot";
 
 .wrapper {
     width: 60ch;
@@ -22,8 +23,24 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 #{get-size('800')};
+}
 
+.content {
     > * + * {
         margin-top: 1em;
+    }
+}
+
+article {
+    > section {
+        &:nth-child(even) {
+            background-color: var(--color-shade);
+            padding-top: #{get-size('700')};
+            padding-bottom: #{get-size('900')};
+        }
+
+        + section {
+            margin-top: 1.728em;
+        }
     }
 }
