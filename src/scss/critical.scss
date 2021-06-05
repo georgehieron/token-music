@@ -24,6 +24,12 @@
     outline-offset: .1rem;
 }
 
+main {
+    &:focus {
+        outline: none;
+    }
+}
+
 .wrapper {
     width: 60ch;
     max-width: 100%;
