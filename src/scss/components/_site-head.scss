@@ -14,13 +14,25 @@
     .nav__list {
         @include apply-utility('box', 'flex');
         place-content: center;
+        flex-wrap: wrap;
 
         li {
+            @include apply-utility('box', 'block');
+            flex: 0 0 100%;
             margin: 0 #{get-size('200')};
+            line-height: 1.728;
         }
 
         a {
             letter-spacing: .05ch;
+        }
+    }
+
+    @include media-query('sm') {
+        .nav__list {
+            li {
+                flex: 0 0 auto;
+            }
         }
     }
 

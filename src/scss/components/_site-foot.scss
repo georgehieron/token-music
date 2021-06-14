@@ -1,6 +1,5 @@
 .site-foot {
     background-color: var(--color-shade);
-    margin-top: #{get-size('700')};
     padding: #{get-size('600')} 0;
     border-bottom: .3em solid var(--color-primary);
 
@@ -38,7 +37,6 @@
     }
 
     @include media-query('sm') {
-        margin-top: #{get-size('800')};
 
         .site-foot__content {
             display: flex;
