@@ -11,12 +11,13 @@
         width: auto;
         height: auto;
         margin: 0;
-        padding: get-size("100") get-size("400");
+        padding: #{get-size('100')} #{get-size('400')};
         color: var(--color-base);
         text-decoration: none;
         white-space: nowrap;
         background: var(--color-primary);
         clip: auto;
         letter-spacing: .05ch;
+        text-decoration: underline;
     }
 }
