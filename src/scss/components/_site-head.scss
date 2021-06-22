@@ -1,3 +1,9 @@
+.site-head {
+    + main {
+        margin-top: get-size('1100');
+    }
+}
+
 .site-head__brand {
     display: inline-block;
     max-width: 100%;

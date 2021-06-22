@@ -48,7 +48,6 @@ article,
 .site-foot {
     > section {
         position: relative;
-        padding-top: #{get-size('700')};
         padding-bottom: #{get-size('900')};
         min-height: calc(#{get-size('400')} * 10);
 
@@ -94,6 +93,8 @@ article,
 
         + section,
         &:last-of-type {
+            padding-top: #{get-size('700')};
+
             &:before {
                 content: "";
                 position: absolute;

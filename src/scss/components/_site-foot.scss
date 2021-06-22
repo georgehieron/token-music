@@ -1,6 +1,7 @@
 .site-foot {
     background-color: var(--color-shade);
-    padding: #{get-size('600')} 0;
+    // margin-top: #{get-size('1100')};
+    padding: 0 0 #{get-size('600')};
     border-bottom: .3em solid var(--color-primary);
 
     &__content {
