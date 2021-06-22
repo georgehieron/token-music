@@ -44,7 +44,8 @@ main {
     }
 }
 
-article {
+article,
+.site-foot {
     > section {
         position: relative;
         padding-top: #{get-size('700')};
@@ -91,7 +92,8 @@ article {
             }
         }
 
-        + section {
+        + section,
+        &:last-of-type {
             &:before {
                 content: "";
                 position: absolute;
@@ -110,7 +112,8 @@ article {
 
 @include dark-theme() {
     @supports( filter: opacity(.025) ) {
-        article {
+        article,
+        .site-foot {
             > section {
                 &:nth-child(odd) {
                     &:after {
