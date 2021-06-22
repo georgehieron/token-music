@@ -5,12 +5,13 @@ button,
         position: relative;
         appearance: none;
         color: var(--color-base);
-        background: var(--color-primary);
+        background-color: var(--color-primary);
         padding: #{get-size('100')} #{get-size('700')};
         border: calc(#{get-size('100')} / 2) solid var(--color-primary);
         border-radius: .2em;
         text-decoration: none;
         letter-spacing: .05ch;
+        transition-delay: .0833s;
 
         &:hover,
         &:focus {
@@ -24,6 +25,9 @@ button,
 
         &:focus {
             text-decoration: underline;
+            text-decoration-style: dashed;
+            text-underline-offset: .15em;
+            text-decoration-thickness: .1em;
         }
 
         &:hover {

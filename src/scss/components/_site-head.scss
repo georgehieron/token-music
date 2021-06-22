@@ -30,7 +30,25 @@
         }
 
         a {
+            position: relative;
+            display: inline-block;
+            padding: 0 .1em;
+            background: linear-gradient(90deg, rgba($primary-lighter, .5) 0, rgba($primary-lighter, .5) 100%);
+            background-repeat: no-repeat;
+            background-position: 0 3em;
             letter-spacing: .05ch;
+            vertical-align: bottom;
+            overflow: hidden;
+            transition: 0.3s ease-in-out background-position, 0.3s ease-in-out color;
+
+            &:hover {
+                color: var(--color-text);
+                background-position: 0 .1em;
+            }
+
+            &:focus {
+                text-decoration-style: dashed;
+            }
         }
     }
 
