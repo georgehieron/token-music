@@ -41,6 +41,8 @@ module.exports = (config) => {
     // Copy Static Files to /dist
     config.addPassthroughCopy("src/fonts");
 
+    config.addShortcode("year", () => `${new Date().getFullYear()}`);
+
     return {
         markdownTemplateEngine: "njk",
         dataTemplateEngine: "njk",
